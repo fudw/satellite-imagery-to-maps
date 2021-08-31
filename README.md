@@ -10,4 +10,5 @@ The original plan was to use a CycleGAN because it does not require paired examp
 ### Change log
 
 #### 30.08.2021<br/>
+v1.02 Further attemps to train while either maintaining or reducing LR to 0.001 failed to avoid failure to converge, i.e. discriminator loss drops to zero and doesn't recover while generator loss shoots up and image quality deteriorates notably. 
 v1.01 Trained Pix2Pix model for 100 epochs with 0.01 LR from scratch. Generator loss becomes rather flat but discriminator loss keeps decreasing. Followed up with another 80 epochs without reducing LR. Gen loss surged while disc loss collasped to almost zero; visible deterioration in generated images.
