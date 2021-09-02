@@ -9,6 +9,7 @@ The original plan was to use a CycleGAN because it does not require paired examp
 <br/>
 ### Change log
 
+v1.04 Trained for another 200 epochs with reduced LR by factor of 10. Gen loss still reducing although very slowly. Difficult to say whether image quality has been improving or not. <br/>
 v1.03 Retrained from scratch with much lower LR 0.0001. Implemented renormalisation of input from (0, 1) to (-1, 1); implemented label smoothing for discriminator; added small random noise to both real and fake images before feeding into discriminator. Loss curves became much smoother and more stable for both generator and discriminator. No failure of convergence has been observed for the first 150 epochs. <br/>
 v1.02 Further attemps to train while either maintaining or reducing LR to 0.001 failed to avoid failure to converge, i.e. discriminator loss drops to zero and doesn't recover while generator loss shoots up and image quality deteriorates notably. <br/>
 #### 30.08.2021<br/>
