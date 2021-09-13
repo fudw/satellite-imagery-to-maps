@@ -11,7 +11,10 @@ The Pix2Pix model seems to produce decent results, which I will use as a base li
 <br/>
 ### Change log
 
-V1.05 Trained for another 80 epochs with one-cycle cosine LR schedule that first quickly warms up to 0.01 and then slowly falling down to 0.0001. Increased weight of reconstruction loss relative to adversarial loss for generator to further focus on reproducing map features. Gen loss reduced from beginning of run by ~5% in the end.<br/>
+#### 13.09.2021<br/>
+v1.06 Trained CycleGAN from scratch for five epochs on the same dataset. Sat->map generator seems to have a much harder time than Map->sat generator for some reason.<br/>
+
+v1.05 Trained for another 80 epochs with one-cycle cosine LR schedule that first quickly warms up to 0.01 and then slowly falling down to 0.0001. Increased weight of reconstruction loss relative to adversarial loss for generator to further focus on reproducing map features. Gen loss reduced from beginning of run by ~5% in the end.<br/>
 v1.04 Trained for another 200 epochs with reduced LR by factor of 10. Gen loss still reducing although very slowly. Difficult to say whether image quality has been improving or not. <br/>
 v1.03 Retrained from scratch with much lower LR 0.0001. Implemented renormalisation of input from (0, 1) to (-1, 1); impleted Two Time-scale Update Rule (TTUR) with different LRs for generator and discriminator; implemented label smoothing for discriminator; added small random noise to both real and fake images before feeding into discriminator. Loss curves became much smoother and more stable for both generator and discriminator. No failure of convergence has been observed for the first 150 epochs. <br/>
 v1.02 Further attemps to train while either maintaining or reducing LR to 0.001 failed to avoid failure to converge, i.e. discriminator loss drops to zero and doesn't recover while generator loss shoots up and image quality deteriorates notably. <br/>
