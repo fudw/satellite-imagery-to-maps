@@ -10,7 +10,7 @@ The Pix2Pix model seems to produce decent results, which I will use as a base li
 <br/>
 <br/>
 ### Change log
-
+v1.08 Trained for 20 more epochs. Sat->map generator has made quite some improvements, while Map->sat generator may be experiencing a little mode collapse but in a less noticeable way.<br/> 
 v1.07 Implemented label smoothing and random noise for the discriminators. Trained for 20 more epochs with both generators producing okay-ish images. Generator loss is mostly constant while discriminator losses are trending downwards very slowly. There was one epoch where one discriminator loss dropped to zero but recovered quickly. No signs of any failure to converge so far.<br/>
 #### 13.09.2021<br/>
 v1.06 Trained CycleGAN from scratch for five epochs on the same dataset. Sat->map generator seems to have a much harder time than Map->sat generator for some reason.<br/>
