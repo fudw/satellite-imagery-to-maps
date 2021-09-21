@@ -10,6 +10,8 @@ The Pix2Pix model seems to produce decent results, which I will use as a base li
 <br/>
 <br/>
 ### Change log
+v1.13 Retrained from scratch using 0.0002 for both generator and discriminator LR following the original paper. For the first 25 epochs no mode collapse is observed in either generator. 
+
 v1.12 Retraining with further reduced discriminator LR  from 0.0005 to 0.0002 from an earlier checkpoint before the mode collapse became frequent did not seem to prevent this from happening. 
 
 v1.11 Further training yielded no noticeable improvement on either generator. While Sat->map performance is not far behind the pix2pix model, the Map->sat model frequently produces dark images based on maps with clear features. Yet the discriminator loss remains sufficiently finite, suggesting possible training failure on the discriminator.
