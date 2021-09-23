@@ -10,6 +10,8 @@ The Pix2Pix model seems to produce decent results, which I will use as a base li
 <br/>
 <br/>
 ### Change log
+v1.14 Trained for further 50 epochs. Both generators have improved significantly without showing signs of mode collapse.
+
 v1.13 Retrained from scratch using 0.0002 for both generator and discriminator LR following the original paper. For the first 25 epochs no mode collapse is observed in either generator. 
 
 v1.12 Retraining with further reduced discriminator LR  from 0.0005 to 0.0002 from an earlier checkpoint before the mode collapse became frequent did not seem to prevent this from happening. 
