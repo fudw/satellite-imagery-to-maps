@@ -10,6 +10,8 @@ The Pix2Pix model seems to produce decent results, which I will use as a base li
 <br/>
 <br/>
 ### Change log
+v1.15 Trained for further 100 epochs with linearly decreasing LR for both the generators and discriminators. Not much improvement is observed. Mode collapse in Map->sat generator worsened compared to first 100 epochs. 
+
 v1.14 Trained for further 50 epochs. Both generators have improved significantly without showing signs of mode collapse.
 
 v1.13 Retrained from scratch using 0.0002 for both generator and discriminator LR following the original paper. For the first 25 epochs no mode collapse is observed in either generator. 
